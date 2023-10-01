@@ -368,3 +368,274 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+/*footer*/
+footer{
+    margin-top: 40px;
+    background: #414141;
+    padding: 60px 0 30px 0;
+    overflow: hidden;
+
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.content-foo{
+    text-align: center;
+
+}
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-foo p{
+    color: rgb(158, 152, 152);    
+}
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+/*parte responsiva*/
+/* tablet */
+@media screen and (max-width:900px) {
+    .container .cabecera .menu{
+        display: none;
+    }
+    .reloj {
+        font-size: 2.5rem;
+        left: 70%;
+    }
+    .container .cabecera .menu ul li{
+        color: white;
+        font-size: 2rem;
+        padding: 5.5vh;
+        cursor: pointer;
+        transition: text-shadow 0.3s ease;
+        text-align: center;
+    }
+    .container .cabecera .menu ul li a{
+        text-decoration: none; /* Elimina el subrayado */
+        color: rgb(255, 255, 255); /* Cambia el color a tu elección */
+        font-family: 'fuente4';
+    }
+    .container .cabecera .menu ul li:hover{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    .container .cabecera .menu ul li:target{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    .container .cabecera .movable-div {
+        width: 700px;
+        height: 350px;
+    }
+    .container .cabecera .movable-div img{
+        width: 250px;
+        height: 250px;
+    
+    }
+    .container .cabecera .movable-div .titulo_medio h3{
+        font-size: 1.5rem;
+    }
+    .container .cabecera .movable-div .titulo_medio h1{
+        font-size: 3rem;
+    }
+    .container .cabecera .movable-div .titulo_medio h2{
+        font-size: 1.2rem; 
+    }
+    /***************CONTENIDO****************/
+    .container .contenido .img1{
+        margin-left: 120px;
+        width:20%;
+        gap: 50px;
+    }
+    .container .contenido .img1 img{
+        width: 350px;
+        height: 280px;
+    }
+    .container .contenido .cont {
+        margin-top: 8.5vh;
+        margin-left: 14.5vh;width: 90%; /* Reducir el ancho al 90% para tabletas */
+        height: 85%;
+        width: 64%;
+        grid-template:
+            "n_1    n_2" auto
+            "n_3    n_2" auto
+            "n_4    n_2" auto
+            "n_5    n_5" auto;
+    }
+
+    .container .contenido .cont .n_1,
+    .container .contenido .cont .n_2,
+    .container .contenido .cont .n_3,
+    .container .contenido .cont .n_4,
+    .container .contenido .cont .n_5 {
+        font-size: 1.4rem; /* Reducir el tamaño de fuente para tabletas */
+    }
+    .container .contenido .cont div{
+        border: 1px solid #4bdc12;
+    }
+    .container .contenido .cont section h1,h2{
+        text-align: center;
+    }
+    .container .contenido .cont section ul li{
+        list-style: none;
+    }
+    
+    .container #seccion2 .carrucel {
+        height: 100vh;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        width: 90%; /* Reducir el ancho al 90% para tabletas */
+        margin: 0 auto; /* Centrar el contenido horizontalmente */
+        padding: 40px; /* Eliminar el espaciado izquierdo */
+    }
+
+    .container #seccion2 .carrucel img {
+        width: 100%; /* Ajustar el ancho de las imágenes al 100% para que sean responsivas */
+        max-width: none; /* Restablecer el ancho máximo */
+        height: 80%; /* Mantener la relación de aspecto original de las imágenes */
+        border-radius: 10px; /* Reducir el radio de borde para tabletas */
+    }
+    .container #seccion2 .carrucel img:hover {
+        /* Anula el efecto de hover en pantallas más pequeñas */
+        cursor: auto;
+        width: 90%;
+        opacity: inherit;
+        filter: inherit;
+    }
+    .container #seccion3 {
+        box-shadow: none; /* Elimina la sombra en tabletas */
+        height: auto; /* Ajusta la altura automáticamente en tabletas */
+    }
+    
+    .container #seccion3 .conten {
+        width: 100%; /* Usa el ancho completo en tabletas */
+        height: auto; /* Ajusta la altura automáticamente en tabletas */
+    }
+    
+    .container #seccion3 .conten .expe {
+        grid-template:
+            "nro_1" auto
+            "nro_3" auto
+            "nro_4" auto
+            "nro_2" auto
+            "nro_5" auto
+            "nro_6" auto
+            "nro_7" auto;
+        gap: 10px; /* Reduce el espacio entre elementos en tabletas */
+    }
+    
+    .container #seccion3 .conten .expe>* {
+        box-shadow: none; /* Elimina las sombras en tabletas */
+        border-radius: 0; /* Elimina la redondez en tabletas */
+        padding: 5px; /* Reduce el espacio interno en tabletas */
+    }
+    
+    .container #seccion3 .conten .expe .nro_2 img {
+        width: 20%; /* Reduce el tamaño de las imágenes en tabletas */
+    }
+    
+    .container #seccion3 .conten .expe .nro_3 img,
+    .container #seccion3 .conten .expe .nro_4 img {
+        width: 40%; /* Reduce el tamaño de las imágenes en tabletas */
+    }
+    
+    .container #seccion3 .conten .expe .nro_5,
+    .container #seccion3 .conten .expe .nro_6 {
+        border-radius: 0; /* Elimina la redondez en tabletas */
+        padding: 5px; /* Reduce el espacio interno en tabletas */
+    }
+}
+/* celular */
+@media screen and (max-width:500px) {
+    /* Agregar estas reglas para hacer que la página sea responsiva en dispositivos móviles */
+
+/* Redefinir estilos generales para dispositivos móviles */
+body {
+    background-size: cover;
+    background-attachment: scroll; /* Cambiar a scroll para dispositivos móviles */
+    background-repeat: repeat-y; /* Cambiar a repeat-y para dispositivos móviles */
+}
+
+.container .cabecera .menu {
+    left: 80%; /* Ajustar la posición del menú para dispositivos móviles */
+}
+
+.reloj {
+    left: 75%; /* Ajustar la posición del reloj para dispositivos móviles */
+}
+
+/* Redefinir estilos de cabecera para dispositivos móviles */
+.container .cabecera .movable-div {
+    height: 80vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container .cabecera .movable-div img {
+    width: 70%; /* Ajustar el tamaño de la imagen para dispositivos móviles */
+    height: auto; /* Altura automática */
+    margin-bottom: 12vh; /* Eliminar el margen izquierdo para dispositivos móviles */
+}
+.reloj {
+    top: 3%;
+    left: 60.5%;
+    font-size: 2rem;
+  }
+  
+  .separador {
+    margin: 0 0.3rem;
+  }
+.container .cabecera .movable-div .titulo_medio h1 {
+    font-size: 3rem; /* Reducir el tamaño de fuente para dispositivos móviles */
+}
+
+/* Redefinir estilos de contenido para dispositivos móviles */
+.container .contenido {
+    flex-direction: column; /* Cambiar a dirección de columna para dispositivos móviles */
+}
+
+.container .contenido .img1 {
+    width: 100%; /* Ajustar el ancho al 100% para dispositivos móviles */
+}
+
+.container .contenido .img1 img {
+    width: 80%; /* Ajustar el tamaño de la imagen para dispositivos móviles */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Reducir el radio de borde para dispositivos móviles */
+    margin-left: 0; /* Eliminar el margen izquierdo para dispositivos móviles */
+}
+
+.container .contenido .cont {
+    width: 100%; /* Ajustar el ancho al 100% para dispositivos móviles */
+    border-radius: 0; /* Eliminar el radio de borde para dispositivos móviles */
+    border: none; /* Eliminar el borde para dispositivos móviles */
+    margin-top: 2vh;
+    padding: 10px; /* Reducir el relleno para dispositivos móviles */
+    gap: 10px; /* Reducir el espacio entre elementos para dispositivos móviles */
+}
+
+.container .contenido .cont .n_1,
+.container .contenido .cont .n_2,
+.container .contenido .cont .n_3,
+.container .contenido .cont .n_4,
+.container .contenido .cont .n_5 {
+    font-size: 1.5rem; /* Reducir el tamaño de fuente para dispositivos móviles */
+    border-radius: 5px; /* Reducir el radio de borde para dispositivos móviles */
+    padding: 5px; /* Reducir el relleno para dispositivos móviles */
+}
+
+
+}
