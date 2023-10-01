@@ -5,9 +5,9 @@
     src: url('../fonts/RationalInteger.ttf') format('truetype'); /* Ruta de la fuente */
     font-family: 'fuente3';
     src: url('../fonts/Tenderness.otf') format('truetype'); 
-
+    font-family: 'fuente4';
+    src: url('../fonts/EtharnigSc.otf') format('truetype');
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@ body {
 }
 .container .cabecera .menu ul li{
     color: white;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 5.5vh;
     cursor: pointer;
     transition: text-shadow 0.3s ease;
@@ -62,35 +62,56 @@ body {
 }
 .container .cabecera .menu ul li a{
     text-decoration: none; /* Elimina el subrayado */
-    color: white; /* Cambia el color a tu elección */
-    font-family: 'MiFuente2';
+    color: rgb(255, 255, 255); /* Cambia el color a tu elección */
+    font-family: 'fuente4';
 }
 .container .cabecera .menu ul li:hover{
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),0 0 20px rgba(255, 255, 255, 0.8);
 }
 .container .cabecera .movable-div {
-    width: 500px;
+    width: 900px;
     height: 400px;
     border-radius: 15px;
     transform-style: preserve-3d;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform-origin: center center;
-    box-shadow: 0 0 20px rgba(193, 251, 2, 0.5);
+    box-shadow: 0 0 20px rgba(1, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+}
+.container .cabecera .movable-div img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-left: 20px;
+
 }
 .container .cabecera .movable-div .titulo_medio{
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
     text-align: center; /* Centra el texto horizontalmente dentro del h1 */
     height: 100%;
+    width: 100%;
+}
+.container .cabecera .movable-div .titulo_medio h3{
+    color: rgb(11, 243, 197);
+    font-size: 2rem;
+    font-family: 'fuente4'; 
 }
 .container .cabecera .movable-div .titulo_medio h1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 4rem;
-    font-family: 'MiFuente1'; 
+    font-family: 'fuente4'; 
+}
+.container .cabecera .movable-div .titulo_medio h2{
+    color: rgb(4, 255, 17);
+    font-size: 1.2rem;
+    font-family: 'fuente4'; 
 }
 .movable-div {
-    background: linear-gradient(45deg, rgba(70, 65, 65, 0.517), transparent);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.76), transparent);
 }
 /***************CONTENIDO****************/
 
@@ -117,13 +138,54 @@ body {
 .container .contenido .cont{
     margin-top: 5.5vh;
     height: 90%;
-    width: 50%;
+    width: 49%;
     border-radius: 5px 50px 5px 50px;
     border: 2px solid #f0f0f0;
     background-color: rgba(49, 49, 49, 0.987);
     color: white;
-    padding: 25px;
-    font-family: 'fuente3';
+    padding: 20px;
+    font-family: 'fuente4';
+    display: grid;
+    gap: 20px;
+    grid-template:
+    "n_1    n_2" auto 
+    "n_3    n_2" auto
+    "n_4    n_2" auto
+    "n_5    n_5" auto
+;
+}
+.container .contenido .cont .n_1{
+    grid-area: n_1;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.container .contenido .cont .n_2{
+    grid-area: n_2;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.container .contenido .cont .n_3{
+    grid-area: n_3;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.container .contenido .cont .n_4{
+    grid-area: n_4;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.container .contenido .cont .n_5{
+    grid-area: n_5;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+.container .contenido .cont div{
+    border: 1px solid #4bdc12;
 }
 .container .contenido .cont section h1,h2{
     text-align: center;
@@ -158,4 +220,14 @@ body {
     width: 500px;
     opacity: 1;
     filter: contrast(120%);
+}
+/*******************EXPERIENCIA****************/
+.container #seccion3{
+    border: 1px solid #00f2fe;
+    height: 100vh;
+}
+.container #seccion3 .conten{
+    border: 1px solid #ff00c8;
+    width: 85%;
+    height: 100vh;
 }
